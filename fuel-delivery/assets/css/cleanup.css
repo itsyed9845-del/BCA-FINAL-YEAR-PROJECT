@@ -1,0 +1,67 @@
+/* A compact dashboard with a permanently accessible account footer. */
+.dashboard-body .sidebar {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    padding: 18px 14px 14px;
+}
+.sidebar .side-head, .sidebar .role-label { flex-shrink: 0; }
+.sidebar .role-label { margin: 22px 10px 10px; }
+.sidebar .side-nav {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    align-content: start;
+    overscroll-behavior: contain;
+    padding: 3px 3px 12px;
+    gap: 3px;
+}
+.sidebar .side-nav a { min-height: 42px; padding: 9px 12px; font-size: 13px; }
+.sidebar .side-profile {
+    flex-shrink: 0;
+    grid-template-columns: auto minmax(0, 1fr);
+    margin-top: 0;
+    padding: 12px 5px 0;
+    row-gap: 10px;
+    background: transparent;
+}
+.side-profile strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sidebar .sidebar-logout {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 42px;
+    padding: 8px 12px;
+    border: 1px solid #496079;
+    border-radius: 10px;
+    background: #162438;
+    color: #f8fafc;
+    font-size: 14px;
+    font-weight: 700;
+}
+.sidebar-logout:hover { border-color: #63eadb; }
+.dashboard-content { padding: 24px; }
+.dashboard-content .welcome-panel { padding: 20px 24px; margin-bottom: 20px; }
+.dashboard-content .welcome-panel h2 { font-size: clamp(24px, 2.5vw, 34px); line-height: 1.2; }
+.dashboard-content .welcome-panel p { font-size: 13px; margin-top: 8px; }
+.dashboard-content .panel { padding: 22px; margin-bottom: 20px; }
+.dashboard-content .metric-card { padding: 20px; }
+.dashboard-content .metric-card strong { font-size: 26px; }
+.dashboard-content .dashboard-grid { gap: 20px; }
+.dashboard-content .sf-map { height: 310px; }
+.sf-address-entry .panel-head { flex-wrap: wrap; gap: 12px; }
+.sf-address-entry .form-group { margin-top: 14px; }
+.sf-address-entry textarea { resize: vertical; }
+.sf-address-entry .sf-note { display: block; line-height: 1.6; }
+@media (max-width: 600px) {
+    .dashboard-content { padding: 16px; }
+    .dashboard-content .welcome-panel, .dashboard-content .panel { padding: 18px; }
+    .dashboard-content .sf-map { height: 280px; }
+}
+@media (max-height: 550px) {
+    .sidebar .role-label { margin-top: 10px; }
+    .sidebar .side-profile .avatar, .sidebar .side-profile > div:nth-child(2) { display: none; }
+}

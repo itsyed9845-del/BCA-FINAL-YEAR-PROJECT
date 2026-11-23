@@ -1,0 +1,10 @@
+<?php
+// Optional: copy to local.php only if your connection differs from defaults.
+// Copy values from your old config/db.php; do not replace the new db.php.
+return [
+    'db_host' => '127.0.0.1',
+    'db_name' => 'fuel_delivery_db',
+    'db_user' => 'root',
+    'db_pass' => '',
+    // 'base_url' => '/fuel-delivery', // normally detected automatically
+];
